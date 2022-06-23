@@ -1,0 +1,10 @@
+public with sharing class LdHandler {
+    public static void regiaonaoatendida(List<Lead> leadadd) {
+        for (Lead ldd : leadadd){
+            if(ldd.Regiao__c == 'Nordeste'){
+                ldd.Regiao__c.addError('A empresa não atende a região Nordeste');
+            }
+        }
+
+    }
+}
