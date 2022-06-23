@@ -1,0 +1,5 @@
+trigger Ld on Lead (before insert) {
+if(Trigger.isInsert)
+    if(Trigger.isBefore)
+        LdHandler.regiaonaoatendida(Trigger.new);
+        }
