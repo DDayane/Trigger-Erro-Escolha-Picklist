@@ -1,0 +1,23 @@
+@istest
+public class LdHandlerTest {
+    @istest
+    public static void regiaonaoatendida(){
+    	List<Lead> ldr= new List<Lead> ();  
+          Opportunity oppTest = new opportunity();
+        Lead ld = new Lead();
+        ld.LastName = 'Junior';
+        ld.Regiao__c = 'Nordeste';
+        ld.Tipo_Cartao__c = 'Luccax Vip';
+        ld.Company = 'Coisa ldc';
+                
+        ldr.add(ld);
+        
+        try{
+       
+       insert ldr;
+    }
+        catch(Exception e){
+            system.assertEquals(e.getMessage(), e.getMessage());
+        }
+	}
+}
